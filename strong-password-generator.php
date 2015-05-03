@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Strong Password Generator
- * Description: Encourage the use of strong passwords by helping users generate one.
+ * Description: Encourage the use of strong passwords by helping users generate them easily.
  * Version: 0.1.0
  * Author: Frankie Jarrett
  * Author URI: http://frankiejarrett.com
