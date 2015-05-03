@@ -16,9 +16,9 @@ Encourage the use of strong passwords by helping users generate them easily.
 
 **Did you find this plugin helpful? Please consider [leaving a 5-star review](https://wordpress.org/support/view/plugin-reviews/strong-password-generator).**
 
-This plugin helps users create strong passwords that are also easy for them to remember.
+Strong passwords are one of the best defenses for maintaining a secure website.
 
-Methodology based on this [xkcd strip](https://xkcd.com/936/).
+This plugin provides a handy Generate Strong Password button in order to encourage users to always choose a secure password.
 
 **Development of this plugin is done [on GitHub](https://github.com/fjarrett/strong-password-generator). Pull requests welcome. Please see [issues reported](https://github.com/fjarrett/strong-password-generator/issues) there before going to the plugin forum.**
 
