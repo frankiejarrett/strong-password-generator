@@ -98,14 +98,14 @@ class Strong_Password_Generator {
 		wp_enqueue_style( 'spg-button' );
 
 		/**
-		 * Filter the password length
+		 * Filter the default password length
 		 *
 		 * @return int
 		 */
 		$length = apply_filters( 'spg_password_length', 20 );
 
 		/**
-		 * Filter whether or not to allow memorable passwords (decreased entropy)
+		 * Filter whether or not to allow memorable passwords (true = decreased entropy)
 		 *
 		 * @return bool
 		 */
