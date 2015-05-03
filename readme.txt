@@ -7,7 +7,7 @@ Stable tag:        0.1.0
 License:           GPLv3
 License URI:       https://www.gnu.org/licenses/gpl-3.0.html
 
-Encourage the use of strong passwords by helping users generate one.
+Encourage the use of strong passwords by helping users generate them easily.
 
 == Description ==
 
