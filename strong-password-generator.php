@@ -86,7 +86,7 @@ class Strong_Password_Generator {
 	 */
 	public static function enqueue_scripts( $hook ) {
 		if (
-			'admin_enqueue_scripts' === current_filter()
+			'admin_enqueue_scripts' === current_action()
 			&&
 			! in_array( $hook, array( 'profile.php', 'user-edit.php', 'user-new.php' ) )
 		) {
