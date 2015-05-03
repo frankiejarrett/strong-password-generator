@@ -8,7 +8,7 @@ jQuery( document ).ready( function( $ ) {
 	$( document ).on( 'click', '#spg-button', function( e ) {
 		e.preventDefault();
 
-		var pass = generatePassword( parseInt( spg_button.length, 10 ), ( true == spg_button.memorable ) );
+		var pass = generatePassword( parseInt( spg_button.length, 10 ), ( '' !== spg_button.memorable ) );
 
 		$( 'input#pass1' ).val( pass );
 		$( 'input#pass2' ).val( pass ).trigger( 'input' );
