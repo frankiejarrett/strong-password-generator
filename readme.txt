@@ -21,7 +21,9 @@ This plugin provides a handy Generate Strong Password button in order to encoura
 
 == Screenshots ==
 
-1. Add description here
+1. When choosing a password, users can optionally choose to have a strong password generated for them.
+2. The fields are filled in automatically and the user is prompted to save their new password.
+3. The strong password generator is also available when editing profiles.
 
 == Changelog ==
 

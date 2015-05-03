@@ -1,0 +1,12 @@
+body.login .spg-button-container {
+	text-align: center;
+}
+
+.spg-button-container {
+	margin: 10px 0 !important;
+}
+
+#spg-button .dashicons {
+	margin-top: 5px;
+	font-size: 18px;
+}

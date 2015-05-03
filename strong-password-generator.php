@@ -64,7 +64,7 @@ class Strong_Password_Generator {
 	}
 
 	/**
-	 * Register scripts
+	 * Register scripts and styles
 	 *
 	 * @action init
 	 *
@@ -72,7 +72,8 @@ class Strong_Password_Generator {
 	 */
 	public static function register_scripts() {
 		wp_register_script( 'spg-password-generator', STRONG_PASSWORD_GENERATOR_URL . 'js/password-generator.min.js', array(), '0.2.1', true );
-		wp_register_script( 'spg-button', STRONG_PASSWORD_GENERATOR_URL . 'js/spg-button.js', array( 'jquery', 'spg-password-generator' ), self::VERSION, true );
+		wp_register_script( 'spg-button', STRONG_PASSWORD_GENERATOR_URL . 'js/button.js', array( 'jquery', 'spg-password-generator' ), self::VERSION, true );
+		wp_register_style( 'spg-button', STRONG_PASSWORD_GENERATOR_URL . 'css/button.css', array(), self::VERSION );
 	}
 
 	/**
@@ -94,6 +95,7 @@ class Strong_Password_Generator {
 
 		wp_enqueue_script( 'spg-password-generator' );
 		wp_enqueue_script( 'spg-button' );
+		wp_enqueue_style( 'spg-button' );
 
 		/**
 		 * Filter the password length
@@ -117,7 +119,7 @@ class Strong_Password_Generator {
 				'memorable' => (bool) $memorable,
 				'i18n'      => array(
 					'button' => esc_html__( 'Generate Strong Password', 'strong-password-generator' ),
-					'alert'  => esc_html__( 'Save this password for your records:', 'strong-password-generator' ),
+					'alert'  => esc_html__( 'Please save your password in a safe place:', 'strong-password-generator' ),
 				),
 			)
 		);
