@@ -13,6 +13,6 @@ jQuery( document ).ready( function( $ ) {
 		$( 'input#pass1' ).val( pass );
 		$( 'input#pass2' ).val( pass ).trigger( 'input' );
 
-		window.alert( spg_button.i18n.alert + "\n\n" + pass );
+		window.alert( spg_button.i18n.alert + '\n\n' + pass );
 	});
 });
