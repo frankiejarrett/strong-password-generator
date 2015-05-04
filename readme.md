@@ -19,7 +19,7 @@ Encourage the use of strong passwords by helping users generate them easily.
 
 Strong passwords are one of the best defenses for maintaining a secure website.
 
-The **Generate Strong Password** button makes it easy for your users to choose a secure password.
+The **Password Generator** button makes it easy for your users to choose a secure password.
 
 This plugin utilizes the [password-generator](https://github.com/bermi/password-generator) JavaScript library under the MIT license.
 
