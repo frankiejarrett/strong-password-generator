@@ -84,6 +84,8 @@ class Strong_Password_Generator {
 	 * @action admin_enqueue_scripts
 	 * @action login_enqueue_scripts
 	 *
+	 * @param string $hook
+	 *
 	 * @return void
 	 */
 	public static function enqueue_scripts( $hook ) {
@@ -95,24 +97,9 @@ class Strong_Password_Generator {
 			return;
 		}
 
-		/**
-		 * Filter whether or not to allow memorable passwords (true = decreased entropy)
-		 *
-		 * @return bool
-		 */
-		$memorable = apply_filters( 'spg_allow_memorable_passwords', false );
-
 		wp_enqueue_script( 'spg-password-generator' );
 		wp_enqueue_script( 'spg-button' );
 		wp_enqueue_style( 'spg-button' );
-
-		wp_localize_script(
-			'spg-button',
-			'spg_button',
-			array(
-				'memorable' => (bool) $memorable,
-			)
-		);
 	}
 
 	/**
@@ -154,6 +141,13 @@ class Strong_Password_Generator {
 		 * @return int
 		 */
 		$max = apply_filters( 'spg_max_password_length', 32 );
+
+		/**
+		 * Filter whether or not to allow memorable passwords (true = decreased entropy)
+		 *
+		 * @return bool
+		 */
+		$memorable = apply_filters( 'spg_allow_memorable_passwords', false );
 		?>
 		<div class="spg-container">
 			<p>
@@ -173,6 +167,7 @@ class Strong_Password_Generator {
 				</p>
 			</div>
 			<input type="hidden" id="spg-default-length" value="<?php echo absint( $length ) ?>">
+			<input type="hidden" id="spg-memorable" value="<?php echo absint( $memorable ) ?>">
 		</div>
 		<?php
 		if ( 'show_password_fields' === current_filter() ) {

@@ -1,8 +1,9 @@
 /* globals generatePassword, spg_button */
 
 jQuery( document ).ready( function( $ ) {
-	var spg_length = parseInt( $( '#spg-default-length' ).val(), 10 ),
-	    $spg_html  = $( '.spg-container' );
+	var spg_length    = parseInt( $( '#spg-default-length' ).val(), 10 ),
+	    spg_memorable = parseInt( $( '#spg-memorable' ).val(), 10 ),
+	    $spg_html     = $( '.spg-container' );
 
 	$( '#pass-strength-result' ).before( $spg_html );
 
@@ -35,7 +36,7 @@ jQuery( document ).ready( function( $ ) {
 
 	function spgGeneratePassword() {
 		var length = parseInt( $( '#spg-length' ).val(), 10 ),
-		    pass   = generatePassword( length, ( '' !== spg_button.memorable ) );
+		    pass   = generatePassword( length, ( 1 === spg_memorable ) );
 
 		$( '#spg-display-pass' ).text( pass );
 		$( 'input#pass1' ).val( pass );
