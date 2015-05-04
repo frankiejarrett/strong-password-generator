@@ -61,6 +61,8 @@ class Strong_Password_Generator {
 	public static function load() {
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 		add_action( 'login_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
+		add_action( 'resetpass_form', array( __CLASS__, 'password_generator' ) );
+		add_filter( 'show_password_fields', array( __CLASS__, 'password_generator' ) );
 	}
 
 	/**
@@ -93,9 +95,44 @@ class Strong_Password_Generator {
 			return;
 		}
 
+		/**
+		 * Filter whether or not to allow memorable passwords (true = decreased entropy)
+		 *
+		 * @return bool
+		 */
+		$memorable = apply_filters( 'spg_allow_memorable_passwords', false );
+
 		wp_enqueue_script( 'spg-password-generator' );
 		wp_enqueue_script( 'spg-button' );
 		wp_enqueue_style( 'spg-button' );
+
+		wp_localize_script(
+			'spg-button',
+			'spg_button',
+			array(
+				'memorable' => (bool) $memorable,
+			)
+		);
+	}
+
+	/**
+	 * Display the password generator button markup
+	 *
+	 * @action resetpass_form
+	 * @filter show_password_fields
+	 *
+	 * @param bool $show_password_fields
+	 *
+	 * @return void|bool
+	 */
+	public static function password_generator( $show_password_fields ) {
+		if (
+			'show_password_fields' === current_filter()
+			&&
+			! $show_password_fields
+		) {
+			return false;
+		}
 
 		/**
 		 * Filter the default password length
@@ -117,28 +154,30 @@ class Strong_Password_Generator {
 		 * @return int
 		 */
 		$max = apply_filters( 'spg_max_password_length', 32 );
-
-		/**
-		 * Filter whether or not to allow memorable passwords (true = decreased entropy)
-		 *
-		 * @return bool
-		 */
-		$memorable = apply_filters( 'spg_allow_memorable_passwords', false );
-
-		wp_localize_script(
-			'spg-button',
-			'spg_button',
-			array(
-				'length'    => absint( $length ),
-				'min'       => absint( $min ),
-				'max'       => absint( $max ),
-				'memorable' => (bool) $memorable,
-				'i18n'      => array(
-					'button' => esc_html__( 'Password Generator', 'strong-password-generator' ),
-					'range'  => esc_html__( 'Length', 'strong-password-generator' ),
-				),
-			)
-		);
+		?>
+		<div class="spg-container">
+			<p>
+				<a href="#" id="spg-button" class="button button-secondary button-large">
+					<span class="dashicons dashicons-admin-network"></span>
+					<?php esc_html_e( 'Password Generator', 'strong-password-generator' ) ?>
+				</a>
+			</p>
+			<div id="spg-controls">
+				<p>
+					<?php esc_html_e( 'Length', 'strong-password-generator' ) ?>
+					<input type="range" id="spg-length" min="<?php echo absint( $min ) ?>" max="<?php echo absint( $max ) ?>" value="<?php echo absint( $length ) ?>">
+					<span id="spg-display-length"><?php echo absint( $length ) ?></span>
+				</p>
+				<p>
+					<code id="spg-display-pass"></code>
+				</p>
+			</div>
+			<input type="hidden" id="spg-default-length" value="<?php echo absint( $length ) ?>">
+		</div>
+		<?php
+		if ( 'show_password_fields' === current_filter() ) {
+			return true;
+		}
 	}
 
 	/**
