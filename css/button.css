@@ -1,9 +1,10 @@
-body.login .spg-container {
-	text-align: center;
+body.wp-admin .spg-container {
+	margin: 20px 0 0 !important
 }
 
-.spg-container {
-	margin: 10px 0 !important;
+body.login .spg-container {
+	margin: 0 0 -5px !important;
+	text-align: center;
 }
 
 #spg-button {
@@ -17,6 +18,10 @@ body.login .spg-container {
 
 #spg-controls {
 	display: none;
+}
+
+body.login #spg-controls {
+	margin-bottom: 5px;
 }
 
 #spg-controls p {
