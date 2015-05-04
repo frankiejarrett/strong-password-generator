@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Strong Password Generator
  * Description: Encourage the use of strong passwords by helping users generate them easily.
- * Version: 0.1.0
+ * Version: 0.2.0
  * Author: Frankie Jarrett
  * Author URI: http://frankiejarrett.com
  * License: GPLv3
@@ -16,7 +16,7 @@ class Strong_Password_Generator {
 	 *
 	 * @const string
 	 */
-	const VERSION = '0.1.0';
+	const VERSION = '0.2.0';
 
 	/**
 	 * Hold plugin instance
