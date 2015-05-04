@@ -119,7 +119,7 @@ class Strong_Password_Generator {
 				'memorable' => (bool) $memorable,
 				'i18n'      => array(
 					'button' => esc_html__( 'Generate Strong Password', 'strong-password-generator' ),
-					'alert'  => esc_html__( 'Please save your password in a safe place:', 'strong-password-generator' ),
+					'alert'  => esc_html__( 'Please save this password in a safe place:', 'strong-password-generator' ),
 				),
 			)
 		);
