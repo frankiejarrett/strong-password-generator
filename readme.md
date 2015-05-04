@@ -41,7 +41,7 @@ This plugin utilizes the [password-generator](https://github.com/bermi/password-
 
 ## Changelog ##
 
-### 0.1.0 - May 2, 2015 ###
+### 0.1.0 - May 4, 2015 ###
 * Initial release
 
 Props [@fjarrett](https://github.com/fjarrett)
