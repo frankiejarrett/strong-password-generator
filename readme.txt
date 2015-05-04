@@ -3,7 +3,7 @@ Contributors:      fjarrett
 Tags:              admin, login, membership, passwords, profile, security, users
 Requires at least: 3.7
 Tested up to:      4.2
-Stable tag:        0.1.0
+Stable tag:        0.2.0
 License:           GPLv3
 License URI:       https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -28,6 +28,12 @@ This plugin utilizes the [password-generator](https://github.com/bermi/password-
 3. The strong password generator is also available when editing profiles.
 
 == Changelog ==
+
+= 0.2.0 - May 4, 2015 =
+
+* Add slider for custom password length control, retire alert window
+
+Props [@fjarrett](https://github.com/fjarrett)
 
 = 0.1.0 - May 4, 2015 =
 
