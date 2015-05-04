@@ -1,5 +1,9 @@
 body.wp-admin .spg-container {
-	margin: 20px 0 0 !important
+	margin: 0 !important;
+}
+
+body.wp-admin.user-new-php .spg-container {
+	margin: 20px 0 0 !important;
 }
 
 body.login .spg-container {
@@ -18,9 +22,6 @@ body.login .spg-container {
 
 #spg-controls {
 	display: none;
-}
-
-body.login #spg-controls {
 	margin-bottom: 5px;
 }
 
