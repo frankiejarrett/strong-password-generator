@@ -1,4 +1,4 @@
-/* globals generatePassword, spg_button */
+/* globals generatePassword */
 
 jQuery( document ).ready( function( $ ) {
 	var spg_length    = parseInt( $( '#spg-default-length' ).val(), 10 ),
