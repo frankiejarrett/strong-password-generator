@@ -1,12 +1,37 @@
-body.login .spg-button-container {
+body.login .spg-container {
 	text-align: center;
 }
 
-.spg-button-container {
+.spg-container {
 	margin: 10px 0 !important;
+}
+
+#spg-button {
+	margin-bottom: 10px;
 }
 
 #spg-button .dashicons {
 	margin-top: 5px;
 	font-size: 18px;
+}
+
+#spg-controls {
+	display: none;
+}
+
+#spg-controls p {
+	padding: 6px 0;
+}
+
+#spg-length {
+	margin: 0 10px;
+	line-height: 40px;
+}
+
+body.login #spg-display-pass {
+	margin: 0 1px;
+	padding: 3px 5px 2px;
+	font-size: 13px;
+	background: #eaeaea;
+	background: rgba(0, 0, 0, 0.07);
 }
