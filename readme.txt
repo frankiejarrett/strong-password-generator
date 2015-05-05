@@ -46,7 +46,7 @@ Note: This setting only affects the minimum length of _generated passwords_, not
 The default maximum password length is `32` and can be overridden with a filter. Simply add this hook to your theme's `functions.php` file or as an [MU plugin](http://codex.wordpress.org/Must_Use_Plugins):
 
 <pre lang="php">
-add_filter( 'spg_max_password_length', 20 );
+add_filter( 'spg_max_password_length', 50 );
 </pre>
 
 Note: This setting only affects the maximum length of _generated passwords_, not passwords manually created by users.
