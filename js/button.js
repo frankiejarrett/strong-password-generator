@@ -25,9 +25,15 @@ jQuery( document ).ready( function( $ ) {
 	});
 
 	$( document ).on( 'focus', 'input#pass1, input#pass2', function() {
+		var $button = $( '#spg-button' );
+
+		if ( ! $button.hasClass( 'active' ) ) {
+			return false;
+		}
+
 		$( 'input#pass1' ).val( '' );
 		$( 'input#pass2' ).val( '' ).trigger( 'input' );
-		$( '#spg-button' ).removeClass( 'active' );
+		$button.removeClass( 'active' );
 		$( '#spg-controls' ).slideUp( 'fast', function() {
 			$( '#spg-length' ).val( spg_length );
 			$( '#spg-display-length' ).text( spg_length );
