@@ -8,7 +8,7 @@ Encourage the use of strong passwords by helping users generate them easily.
 **Tags:** [admin](https://wordpress.org/plugins/tags/admin), [login](https://wordpress.org/plugins/tags/login), [membership](https://wordpress.org/plugins/tags/membership), [passwords](https://wordpress.org/plugins/tags/passwords), [profile](https://wordpress.org/plugins/tags/profile), [security](https://wordpress.org/plugins/tags/security), [users](https://wordpress.org/plugins/tags/users)  
 **Requires at least:** 3.7  
 **Tested up to:** 4.2  
-**Stable tag:** 0.2.0  
+**Stable tag:** 0.3.0  
 **License:** [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)  
 
 [![Build Status](https://travis-ci.org/fjarrett/strong-password-generator.png?branch=master)](https://travis-ci.org/fjarrett/strong-password-generator) 

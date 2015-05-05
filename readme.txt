@@ -3,7 +3,7 @@ Contributors:      fjarrett
 Tags:              admin, login, membership, passwords, profile, security, users
 Requires at least: 3.7
 Tested up to:      4.2
-Stable tag:        0.2.0
+Stable tag:        0.3.0
 License:           GPLv3
 License URI:       https://www.gnu.org/licenses/gpl-3.0.html
 
