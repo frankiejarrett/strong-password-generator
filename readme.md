@@ -25,6 +25,41 @@ This plugin utilizes the [password-generator](https://github.com/bermi/password-
 
 **Development of this plugin is done [on GitHub](https://github.com/fjarrett/strong-password-generator). Pull requests welcome. Please see [issues reported](https://github.com/fjarrett/strong-password-generator/issues) there before going to the plugin forum.**
 
+## Frequently Asked Questions ##
+
+### How can I change the default generated password length? ###
+The default password length is `20` and can be overridden with a filter. Simply add this hook to your theme's `functions.php` file or as an [MU plugin](http://codex.wordpress.org/Must_Use_Plugins):
+
+```php
+add_filter( 'spg_default_password_length', 12 );
+```
+
+### How can I change the minimum required generated password length? ###
+The default minimum password length is `7` and can be overridden with a filter. Simply add this hook to your theme's `functions.php` file or as an [MU plugin](http://codex.wordpress.org/Must_Use_Plugins):
+
+```php
+add_filter( 'spg_min_password_length', 8 );
+```
+
+Note: This setting only affects the minimum length of _generated passwords_, not passwords manually created by users.
+
+### How can I change the maximum generated password length allowed? ###
+The default maximum password length is `32` and can be overridden with a filter. Simply add this hook to your theme's `functions.php` file or as an [MU plugin](http://codex.wordpress.org/Must_Use_Plugins):
+
+```php
+add_filter( 'spg_max_password_length', 20 );
+```
+
+Note: This setting only affects the maximum length of _generated passwords_, not passwords manually created by users.
+
+### How can I generate passwords that are easier to memorize? ###
+The default mode for password generation is non-memorable (alphanumeric + special characters), but this too can be overridden with a filter so that generated passwords are purely alphabetic, making them easier for users to memorize. Simply add this hook to your theme's `functions.php` file or as an [MU plugin](http://codex.wordpress.org/Must_Use_Plugins):
+
+```php
+add_filter( 'spg_allow_memorable_passwords', '__return_true' );
+```
+
+
 ## Screenshots ##
 
 ### When choosing a password, users can optionally choose to have a strong password generated for them.
