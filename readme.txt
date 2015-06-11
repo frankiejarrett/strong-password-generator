@@ -28,7 +28,7 @@ This plugin utilizes the [password-generator](https://github.com/bermi/password-
 The default password length is `20` and can be overridden with a filter. Simply add this hook to your theme's `functions.php` file or as an [MU plugin](http://codex.wordpress.org/Must_Use_Plugins):
 
 <pre lang="php">
-add_filter( 'spg_default_password_length', 12 );
+add_filter( 'spg_default_password_length', function() { return 12; } );
 </pre>
 
 = How can I change the minimum required generated password length? =
@@ -36,7 +36,7 @@ add_filter( 'spg_default_password_length', 12 );
 The default minimum password length is `7` and can be overridden with a filter. Simply add this hook to your theme's `functions.php` file or as an [MU plugin](http://codex.wordpress.org/Must_Use_Plugins):
 
 <pre lang="php">
-add_filter( 'spg_min_password_length', 8 );
+add_filter( 'spg_min_password_length', function() { return 8; } );
 </pre>
 
 Note: This setting only affects the minimum length of _generated passwords_, not passwords manually created by users.
@@ -46,7 +46,7 @@ Note: This setting only affects the minimum length of _generated passwords_, not
 The default maximum password length is `32` and can be overridden with a filter. Simply add this hook to your theme's `functions.php` file or as an [MU plugin](http://codex.wordpress.org/Must_Use_Plugins):
 
 <pre lang="php">
-add_filter( 'spg_max_password_length', 50 );
+add_filter( 'spg_max_password_length', function() { return 50; } );
 </pre>
 
 Note: This setting only affects the maximum length of _generated passwords_, not passwords manually created by users.
