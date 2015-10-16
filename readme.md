@@ -9,13 +9,17 @@ Encourage the use of strong passwords by helping users generate them easily.
 **Requires at least:** 3.7  
 **Tested up to:** 4.2  
 **Stable tag:** 0.3.0  
-**License:** [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)  
+**License:** [GPLv2+](https://www.gnu.org/licenses/gpl-2.0.html)  
 
 [![Build Status](https://travis-ci.org/fjarrett/strong-password-generator.png?branch=master)](https://travis-ci.org/fjarrett/strong-password-generator) 
 
 ## Description ##
 
-**Did you find this plugin helpful? Please consider [leaving a 5-star review](https://wordpress.org/support/view/plugin-reviews/strong-password-generator).**
+**NOTE: THIS PLUGIN IS NO LONGER MAINTAINED**
+
+As of [WordPress 4.3 "Billie"](https://wordpress.org/news/2015/08/billie/) strong passwords are now automatically generated.
+
+---
 
 Strong passwords are one of the best defenses for maintaining a secure website.
 
