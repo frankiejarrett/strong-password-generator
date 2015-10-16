@@ -186,7 +186,6 @@ class Strong_Password_Generator {
 			$class = __CLASS__;
 			self::$instance = new $class;
 		}
-
 		return self::$instance;
 	}
 
