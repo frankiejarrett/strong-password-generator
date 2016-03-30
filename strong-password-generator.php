@@ -5,9 +5,11 @@
  * Version: 0.3.0
  * Author: Frankie Jarrett
  * Author URI: http://frankiejarrett.com
- * License: GPLv2+
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: strong-password-generator
+ *
+ * Copyright: © 2015 Frankie Jarrett.
+ * License: GNU General Public License v2.0
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 
 class Strong_Password_Generator {
